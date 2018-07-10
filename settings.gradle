@@ -1,3 +1,4 @@
 rootProject.name = 'effective_java'
 include 'lambdaAndStream'
+include 'createAndDestroyObject'
 
