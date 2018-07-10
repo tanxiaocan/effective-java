@@ -1,5 +1,7 @@
 package com.txc.object.create;
 
+import java.util.Objects;
+
 /**
  * @Auther: xiaocan
  * @Date: 2018/7/10 19:52
@@ -13,13 +15,22 @@ public class NyPizza extends Pizza{
     public static class Builder extends Pizza.Builder<Builder> {
         private final Size size;
         public Builder(Size size){
+            this.size = Objects.requireNonNull(size);
+        }
 
-            this.size = size;
+        @Override
+        protected Builder self() {
+            return null;
+        }
+
+        @Override
+        Pizza build() {
+            return null;
         }
     }
 
-    NyPizza(Builder<?> builder) {
+    NyPizza(Builder builder) {
         super(builder);
-        this.size = builder.
+        this.size = builder.size;
     }
 }
