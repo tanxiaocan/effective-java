@@ -20,16 +20,16 @@ public class NyPizza extends Pizza{
 
         @Override
         protected Builder self() {
-            return null;
+            return this;
         }
 
         @Override
-        Pizza build() {
-            return null;
+        public NyPizza build() {
+            return new NyPizza(this);
         }
     }
 
-    NyPizza(Builder builder) {
+    private NyPizza(Builder builder) {
         super(builder);
         this.size = builder.size;
     }
